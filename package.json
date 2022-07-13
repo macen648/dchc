@@ -1,0 +1,34 @@
+{
+  "name": "dchc",
+  "version": "0.0.0",
+  "description": "Command line tool for running bot templates and generating Discord bots using the dcHandler command handler frame work.",
+  "main": "dchc.js",
+  "bin": "./bin/dchc.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macen648/dch.git"
+  },
+  "keywords": [
+    "cli",
+    "command",
+    "dcHandler",
+    "handler",
+    "bot",
+    "discord",
+    "templates"
+  ],
+  "author": "Macen <3",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/macen648/dch/issues"
+  },
+  "homepage": "https://github.com/macen648/dch#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2"
+  }
+}
