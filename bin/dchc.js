@@ -6,18 +6,19 @@ const pkg = require('../package.json')
 commander.version(pkg.version, '-v, --version', 'output the current version')
 
 commander
-    .command('gen [name] [type]')
+    .command('gen [name]')
     .description('Gen a template.')
+    .option('-d, --dir <dir>', 'Change output folder', './')
+    .option('-t, --type <template-name>', 'Change template', 'use-selector')
+    .option('-t-D, --type-Default', 'Default to basic')
     .option('--force', 'Overwrite folder', false)
-    .action(require("../lib/gen"))
+    .action(require("../commands/gen"))
 
-// commander
-//     .command('run [type]')
-//     .description('Run a template.')
-//     .option('-p, -prefix', 'Prefix for bot', '$')
-//     .action((options, type) => {
-//         console.log(options)
-//         console.log(type)
-//     })
+
+commander
+    .command('run')
+    .description('Run a template.')
+    //.option('-p, -prefix', 'Prefix for bot', '$')
+    .action(require("../commands/run"))
 
 commander.parse(process.argv)
